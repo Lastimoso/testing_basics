@@ -36,14 +36,7 @@ users.each do |user|
         if Faker::Number.within(range: 1..10).odd?
           task.fulfilled_at = Faker::Time.backward(days: 15, period: :evening)
           task.user = users.sample
-          unless task.valid?
-            puts task.errors.full_messages
-          end
         end
-      end
-      unless project.save
-        puts project.errors.full_messages
-        puts.project.inspect
       end
     end
   end
