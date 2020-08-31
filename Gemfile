@@ -28,6 +28,7 @@ gem 'devise'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
+gem 'turbolinks_render', '~> 0.9.20'
 
 gem 'faker'
 

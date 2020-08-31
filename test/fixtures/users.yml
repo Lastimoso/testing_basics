@@ -1,0 +1,10 @@
+one:
+  first_name: John
+  last_name: Rambo
+  email: john@rambo.com
+  admin: true
+
+two:
+  first_name: John
+  last_name: McClane
+  email: john@mcclane.com

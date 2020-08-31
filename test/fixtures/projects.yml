@@ -1,0 +1,11 @@
+one:
+  user: one
+  name: String
+  description: String
+  due_date: <%= Time.now %>
+
+two:
+  user: one
+  name: String
+  description: String
+  due_date: <%= 2.days.ago %>

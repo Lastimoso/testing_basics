@@ -1,0 +1,7 @@
+one:
+  project: one
+  content: String
+
+two:
+  project: two
+  content: String

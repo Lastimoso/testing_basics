@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>Proyectos</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Creador</th>
+        <th>Vencimiento</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @projects.each do |project| %>
+        <tr id="project_<%= project.id %>">
+          <td><%= link_to project.name, project_path(project) %></td>
+          <td><%= project.description %></td>
+          <td><%= project.user.full_name %></td>
+          <td><%= project.due_date %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <%= render "form", project: @project %>
+</div>
