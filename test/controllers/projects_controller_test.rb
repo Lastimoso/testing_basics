@@ -17,6 +17,27 @@ class ProjectsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "sho"
+  test "#create should be a success" do
+    assert_difference("Project.count", 1) do
+      post projects_url, params: {
+        project: {
+          name: "Brand New",
+          description: "This description has more than 10 chars",
+          due_date: "2020-10-20"
+        }
+      }
+    end
+  end
 
+  test "#create should render validation errors" do
+    assert_no_difference("Project.count") do
+      post projects_url, params: {
+        project: {
+          name: "",
+          description: "This description has more than 10 chars",
+          due_date: "2020-10-20"
+        }
+      }
+    end
+  end
 end

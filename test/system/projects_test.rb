@@ -13,7 +13,6 @@ class ProjectsTest < ApplicationSystemTestCase
 
     click_on "Create Project"
 
-    assert_equal projects_path, page.current_path
     assert page.assert_text("My magnific project description")
     assert_selector "td", text: "My magnific project description"
     find('td', text: "New project Name").click
@@ -27,5 +26,7 @@ class ProjectsTest < ApplicationSystemTestCase
 
     assert_selector "h1", text: "Cambiadito"
     click_on "Volver al listado"
+
+    assert_equal projects_path, page.current_path
   end
 end

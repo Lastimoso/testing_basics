@@ -11,7 +11,7 @@ class ProjectsController < ApplicationController
     if @project.save
       redirect_to projects_path(anchor: "project_#{@project.id}"), notice: "Projecto creado exitosamente"
     else
-      @projects = current_user.projects
+      @projects = @projects = Project.all
       render :index
     end
   end

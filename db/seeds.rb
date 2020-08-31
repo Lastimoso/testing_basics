@@ -39,6 +39,7 @@ users.each do |user|
         end
       end
     end
+    project.save!
   end
 end
 puts "done!"
