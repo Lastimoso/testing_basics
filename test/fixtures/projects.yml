@@ -1,11 +1,12 @@
-one:
-  user: one
-  name: String
-  description: String
-  due_date: <%= Time.now %>
+due:
+  id: 1
+  user: user
+  name: Due
+  description: "1234567890"
+  due_date: <%= Time.current %>
 
-two:
-  user: one
-  name: String
-  description: String
+over_due:
+  user: user
+  name: OverDue
+  description: "1234567890"
   due_date: <%= 2.days.ago %>

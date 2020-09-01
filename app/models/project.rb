@@ -9,5 +9,5 @@ class Project < ApplicationRecord
   validates :due_date, presence: true
 
   scope :due_today, -> { where(due_date: Date.current) }
-  scope :over_due, -> { where('due_date <= ?', Date.current) }
+  scope :over_due, -> { where('due_date < ?', Date.current) }
 end

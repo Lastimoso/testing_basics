@@ -2,8 +2,8 @@ require 'test_helper'
 
 class ProjectsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @project = projects(:one)
-    @user = users(:one)
+    @project = projects(:due)
+    @user = users(:admin)
     login_as @user
   end
 
